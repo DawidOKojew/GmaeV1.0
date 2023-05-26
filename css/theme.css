@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #222;
+  font-family: "Press Start 2p", monospace;
+  font-smooth: never;
+  height: 98vh;
+}
+
+/* UI Design */
+.topUI {
+  position: absolute;
+  z-index: 1000;
+  transform: translate(-50%, 25px);
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  letter-spacing: 2px;
+  color: #fff;
+  font-size: 17px;
+}
+
+.topUI::before {
+  display: inline-block;
+  height: 17px;
+  padding: 1px 2px;
+  line-height: 19px;
+  font-size: 17px;
+  background-color: #fff;
+  text-shadow: none;
+  font-weight: 900;
+  letter-spacing: 0;
+  border-radius: 6px;
+  margin: 30px;
+  border: 2px solid #7bd4c6;
+}
+
+#time {
+  left: 13%;
+  color: #f2f22c;
+}
+
+#time::before {
+  content: "TIME";
+  color: #ec6f17;
+}
+
+#score {
+  left: 45%;
+}
+
+#score::before {
+  content: "SCORE";
+  color: #a04897;
+}
+
+#lap {
+  left: 88%;
+  width: 45%;
+}
+
+#lap::before {
+  content: "LAP";
+  color: #0081de;
+}
+
+#tacho {
+  position: absolute;
+  text-align: right;
+  width: 23%;
+  bottom: 5%;
+  z-index: 2000;
+  color: #e93013;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  letter-spacing: 2px;
+  font-size: 23px;
+}
+
+#tacho::after {
+  content: "kh/h";
+  color: #fab452;
+  font-size: 18px;
+  margin-left: 5px;
+}
+
+/*road design*/
+#game {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #221;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  transition: opacity 10s;
+}
+
+#road {
+  transition: opacity 2s;
+  transition-timing-function: steps(8, end);
+}
+
+#road * {
+  position: absolute;
+  image-rendering: pixelated;
+}
+
+#hero {
+  background-repeat: no-repeat;
+  background-position: -110px 0;
+  z-index: 2000;
+  transform: scale(1.4);
+}
+
+#cloud {
+  background-size: auto 100%;
+  width: 100%;
+  height: 57%;
+}
+
+/*home screen design*/
+#road * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#home {
+  position: absolute;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 1000; /*need this cause clip-path changes tack context*/
+}
+
+#highscore {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  -moz-column-count: 3;
+       column-count: 3;
+  -moz-column-fill: auto;
+       column-fill: auto;
+}
+
+#highscore * {
+  color: #9c95a4;
+  margin: 0 0 6px 27px;
+}
+
+h1 {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  font-size: 5em;
+  background: -webkit-gradient(#25d8b0, #e2bbf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}/*# sourceMappingURL=theme.css.map */
